@@ -1,0 +1,203 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>LESS</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+		<style type="text/css">
+		  .gist {max-width:1200px !important;}
+		  .gist-file
+		  .gist-data {max-height: 500px;max-width: 1200px;}
+		</style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section> 
+					<p><img src="img/dojo_aplub.png">	</p>
+					<img width="400" height="160"  src="img/LESS_Logo.png" >						
+				</section>								
+				<section>
+					<section>
+						<h2>O que é o LESS?</h2>
+						<p>É um pré-processador criado em 2009 por Alexis Sellier, mais conhecido como @cloudhead. Originalmente escrito em Ruby e depois convertido para Javascript.</p>
+					</section>
+					<section>
+						<h2>O que são pré-processadores?</h2>
+						<p>Pré-processadores são programas que recebem uma entrada, normalmente um texto, efetuando conversões em seu conteúdo que podem incluir substituições e inclusões condicionais.</p>
+					</section>
+					<section>
+						<h2>Pré-Processadores CSS</h2>
+						<p>No caso dos pré-processadores CSS este fluxo não é diferente, onde os códigos são desenvolvidos através de seus recursos facilitadores, depois submetido ao processador tendo como resultado seu conteúdo 
+						   adequado as limitações do CSS. O principal benefício dos pré-processadores é o ganho na produtividade, seja na criação ou manutenção de estilos, gerando aplicações organizadas e sem duplicação de código.</p>
+					</section>
+				</section>
+				<section>
+					<section>
+							<h2>Vantagens:</h2>							
+							<ul>
+								<li>Implementar dinamismo nas folhas de estilos;</li>
+								<li>Trabalhar com recursos fundamentais de programação, como variavéis, classes e funções;</li>
+								<li>Reaproveitamento de estilos no CSS;</li>								
+							</ul>                    
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Instalação:</h2>
+						<p>Vincule seus estilos <strong>.less</strong> com o atributo <strong>rel</strong> definido como: <strong>'stylesheet/less'</strong>:
+						<img src="img/LessInstall.jpg">
+						<p>Baixe o <strong>less.js</strong> no site oficial <a href="lessocss.org">lesscss.org</a> ou se prefereir diretamente no link: <a href="https://raw.github.com/less/less.js/v2.7.1/dist/less.min.js"> Get Less.js</a>
+						e inclua no <strong>'head'</strong> da sua página:</p>
+						<img src="img/LessInstall2.jpg">	
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2> Variáveis: </h2>
+						<p>Variáveis são bem vindas em qualquer lugar, e não poderiam faltar no CSS, quantas vezes já precisamos usar a mesma cor em diversos pontos diferentes? Por exemplo:</p>
+						<script src="https://gist.github.com/gmouraws/8d8c3cacf8d1ed44982dd6b4ab3f4818.js"></script>						
+						<p><small><strong>*Obs:</strong> Semelhante ao PHP, o LESS permite criar variáveis com strings como valor.</small></p>
+					</section>
+					<section>
+						<h2> Aninhamento(Nesting): </h2>
+						<p>Nesting é o que nos permite escrever o código praticamente sem repetições de seletores, o que facilita muito no desenvolvimento, pois no CSS não é possível organizar de forma hierárquica (um dentro do outro), por exemplo:</p>												
+						<script src="https://gist.github.com/gmouraws/37c4c170947352f0cf77d0b1684e8d0b.js"></script>
+					</section>
+					<section>
+						<h2> Pseudo-elementos: </h2>
+						<p> No LESS, é disponibilizado o símbolo "&" para herança de atributos e pseudo-elementos. Por exemplo:</p>												
+						<script src="https://gist.github.com/gmouraws/be22fd40898925e47f1cedaafb8c1240.js"></script>
+					</section>					
+				</section>
+				<section>
+					<section>
+						<h2> Mixins: </h2>
+						<p>São parecidos com funções, porémm são usados para grupos reutilizáveis, permitem que você incorpore todas as propriedades de uma classe para outra, são como variavéis, mas para classes inteiras. Exemplo:</p>												
+						<script src="https://gist.github.com/gmouraws/ef1a87d8872f0e3f20079cc56b15a498.js"></script>
+					</section>
+					<section>
+						<h2> Mixins parametrizados: </h2>
+						<p>O que significa que podem ter argumentos para aumentar sua utilidade.</p>												
+						<script src="https://gist.github.com/gmouraws/306432a982f36e718dbd98644f923869.js"></script>
+						<p>Podem também ter um valor padrão parametrizado.</p>
+						<script src="https://gist.github.com/gmouraws/f6ea654f380ea1a759c026d4b5023f82.js"></script>
+					</section>
+				</section>	
+				<section>
+					<section>
+						<h2> Operações: </h2>
+						<p>Operações como adição, subtração, divisão e multiplicação de cores e valores das propriedades, podem ser usadas para criar diversas relações entre elas. </p>												
+						<script src="https://gist.github.com/gmouraws/57c5d7f2c56d4027b255f91d727cc7bc.js"></script>
+					</section>
+					<section>
+						<h2> Funções: </h2>
+						<p>Existem diversas funções prontas no LESS, funções de texto, matemáticas, imagens, listas, tipos e cores.</p>												
+						<script src="https://gist.github.com/gmouraws/fa15411f8ef0ffff0c3d019338a3b986.js"></script>						
+						<p>	<a href="http://lesscss.org/functions/#functions-overview">functions-overview - lesscss.org</a></p>
+					</section>
+					<section>
+						<h2> Palhetas de cores automáticas: </h2>
+						<p>Imagine que no site (este é o site), tenha uma cor base principal e algumas cores secundárias combinando(default), 
+						ao invéz de ficar "catando" cores na tabela hexadecimal ou onde quer que seja, no LESS podemos usar funções para gerar estas cores: </p>												
+						<script src="https://gist.github.com/gmouraws/1bd65c5d007703225581af83fbbf6087.js"></script>
+						<p>No caso atual, vamos gerar cores 10% mais lights e 20% mais saturadas.</p>						
+					</section>
+				</section>		
+				<section>
+					<section>
+						<h2> Importações(Imports): </h2>
+						<p>Não importa muito a ordem de declaração do "@import" no LESS, ele sempre encontrará, desde que tenha a extensão <strong>.less</strong>, diferentemente do CSS padrão. </p>												
+						<p>Estas importações são importantes para separar temas ou até mesmo variáveis de "sistemas diferentes", não acumulando centenas de códigos em um mesmo arquivo. Exemplo:</p>						
+						<script src="https://gist.github.com/gmouraws/4f068deedb6e7dcf0bb54f47a631fe80.js"></script>
+					</section>							
+				</section>	
+				<section>
+					<h2>Exemplos:</h2>
+					<section>																	
+						<script src="https://gist.github.com/gmouraws/500fdc8d7c3745ad68002aeb081ee4e5.js" ></script>
+					</section>	
+					<section>						
+						<script src="https://gist.github.com/gmouraws/e06cb79556767b0477573a510d6bcec9.js"></script>
+					</section>	
+					<section>						
+						<script src="https://gist.github.com/gmouraws/84e73a4751c05522a8a292c0afe30357.js"></script>
+					</section>
+					<section>						
+						<script src="https://gist.github.com/gmouraws/cbd376214cc890aaf1f93d7e523f615f.js"></script>
+					</section>
+					<section> 
+						<p><img src="img/selecionarEmpresaDirf.jpg"></p>											
+					</section>
+					<section> 
+						<p><img src="img/exemploDirfAplub.jpg"></p>											
+					</section>
+					<section> 
+						<p><img src="img/exemploDirfEcoAplub.jpg"></p>											
+					</section>
+				</section>	
+				<section>
+					<section>
+							<h2>Conclusão</h2>
+							<p>O LESS oferece diversos recursos facilitadores, tanto para criação, quanto para a manutenção de CSS, sendo assim recomendado para sistemas novos e legados.</p>					    
+							<p>O uso de pré-processadores está sendo uma realidade no mercado, logo, deve ser encontrado em diversos portais, podendo também ser requisito em oportunidades de emprego.</p>
+					</section>
+				</section>	
+				<section>
+					<section>
+							<h3>
+							  Perguntas?
+							</h3>
+							<img class="pull-left" src="img/super_Cap.png" style="background-color: #fff; border-radius: 50%;">
+							<p class="tx-left margin-top-lg padding-top-lg">
+							  <strong>Guilherme Moura</strong>
+							  <br>
+							  <img style="margin:0;padding:0;-webkit-filter: invert(100%);filter: invert(100%);vertical-align: middle;" width="24" src="img/mark-github.png">&nbsp;
+							  <a href="https://github.com/gmouraws">github.com/guilhermemoura</a>						 
+							 
+							</p>
+							<p class="margin-bottom-lg">
+							  <strong>Obrigado!</strong>
+							</p>
+					    
+					</section>
+				</section>	
+			</div>			
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
