@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>LESS</title>
+		<title>ASP .NET MVC</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/black.css">
@@ -33,135 +33,76 @@ p
 		<div class="reveal">
 			<div class="slides">
 				<section> 					
-					<img width="400" height="160"  src="img/LESS_Logo.png" >						
+					<img src="img/aspnetmvc.png" >						
 				</section>								
 				<section>
 					<section>
-						<h2>O que é o LESS?</h2>
-						<p>É uma linguagem dinâmica de estilos, que estende o CSS proporcionando o uso de variavéis, operadores e funções, um pré-processador criado em 2009 por Alexis Sellier, mais conhecido como @cloudhead. Originalmente escrito em Ruby e depois convertido para Javascript.</p>
+						<h2>MVC (Model View Controller)</h2>
+						<br>
+						<ul>
+							<li> É uma arquitetura de software, que separa a lógica da interface do usuário. Isto é conseguido através da separação da aplicação em três partes Model, View e Controller. </li>
+							<li> Uma das principais caracteristicas é a separação de responsabilidades. </li>
+							<li> Um modelo ou padrão de projeto. </li>
+							<br>
+							<p>Resumindo, o padrão Model-View-Controller (MVC) separa os diferentes componentes de uma aplicação WEB de forma a dar mais controle sobre cada parte individual da aplicação tornando a aplicação mais fácil de desenvolver, modificar e testar.</p>
+						</ul>
 					</section>
 					<section>
-						<h2>O que são pré-processadores?</h2>
-						<p>Pré-processadores são programas que recebem uma entrada, normalmente um texto, efetuando conversões em seu conteúdo que podem incluir substituições e inclusões condicionais.</p>
+						<h2>Model </h2>
+						<p>Representa os dados da aplicação e as regras do negócio que governam o acesso e a modificação dos dados. O modelo mantém o estado persistente do negócio e fornece ao controlador a capacidade de acessar as funcionalidades da aplicação encapsuladas pelo próprio modelo.</p>
 					</section>
 					<section>
-						<h2>Pré-Processadores CSS</h2>
-						<p>No caso dos pré-processadores CSS este fluxo não é diferente, onde os códigos são desenvolvidos através de seus recursos facilitadores, depois submetido ao processador tendo como resultado seu conteúdo 
-						   adequado as limitações do CSS. O principal benefício dos pré-processadores é o ganho na produtividade, seja na criação ou manutenção de estilos, gerando aplicações organizadas e sem duplicação de código.</p>
+						<h2>View</h2>
+						<p>Responsável por renderizar o conteúdo de uma parte particular do modelo e encaminhar para o controlador as ações do usuário; acessa também os dados do modelo via controlador e define como esses dados devem ser apresentados.</p>
+					</section>
+					<section>
+						<h2>Controller</h2>
+						<p>Define o comportamento da aplicação, é ele que interpreta as ações do usuário e faz o mapeamento para às chamadas do modelo. Em um cliente de aplicações Web essas ações do usuário poderiam ser cliques de botões ou seleções de menus. As ações realizadas pelo modelo incluem ativar processos de negócio ou alterar o estado do modelo.</p>
+					</section>
+					<section>
+						<img src="img/mvc_concept2.png">		
 					</section>
 				</section>
 				<section>
 					<section>
-							<h2>Vantagens</h2>							
-							<ul>
-								<li>Folhas de estilos dinâmicas;</li>
-								<li>Trabalhar com recursos fundamentais de programação, como variavéis e funções;</li>
-								<li>Reaproveitamento de código.</li>
-							</ul>                    
+							<h2>ASP .NET MVC</h2>							
+							<p>
+								O ASP .NET MVC é uma implementação da arquitetura MVC para o ASP .NET em um framework com o objetivo de criar aplicações WEB no padrão MVC e fornecer uma alternativa ao modelo WebForm do ASP .NET disponível até então.
+							</p>
+							<p>
+								O framework ASP .NET MVC fornece um ambiente robusto e leve que esta integrado aos recursos do ASP .NET como master pages e membership sendo definido no namespace System.Web.Mvc e apresenta os seguintes componentes:
+							</p>							
 					</section>
+					<section>
+						<h2>Models </h2>
+						<p>Os objetos Model(modelo) são as partes da aplicação que implementam a lógica o domínio de dados da aplicação e retornam e armazenam o estado do modelo em um banco de dados.</p>
+					</section>
+					<section>
+						<h2>Views </h2>
+						<p>As Views(visões) são os componentes que exibem a interface do usuário e em geral é criada a partir do modelo de dados.</p>
+					</section>
+					<section>
+						<h2>Controllers </h2>
+						<p>Os Controllers(controladores) são os componentes que tratam com a interação do usuário, trabalham com o modelo e selecionam uma visão para ser exibida; Em uma aplicação MVC uma view somente exibe informação, o controller trata e retorna a entrada do usuário e a interação.</p>
+					</section>
+				</section>				
+				<section>
+					<section>
+						<h2> Vantagens do MVC </h2>
+						<br>
+						<ul>
+							<li>Separação das responsabilidades.</li>
+							<li>Permite o desenvolvimento orientado a testes (TDD).</li>
+							<li>Como o modelo MVC gerencia múltiplos visualizadores usando o mesmo modelo é fácil manter, testar e atualizar sistemas múltiplos.</li>
+							<li>Torna a aplicação escalável.</li>
+							<li>É possível ter desenvolvimento em paralelo para o modelo , visualizador e controle pois são independentes.</li>
+							<li>É mais fácil gerenciar a complexidade da aplicação.</li>	
+						</ul>
+					</section>									
 				</section>
-				<section>
-					<section>
-						<h2> Instalação</h2>
-						<p>Vincule seus estilos <strong>.less</strong> com o atributo <strong>rel</strong> definido como: <strong>'stylesheet/less'</strong>:
-						<img src="img/LessInstall.jpg">
-						<p>Baixe o <strong>less.js</strong> no site oficial <a href="lessocss.org">lesscss.org</a> ou se prefereir diretamente no link: <a href="https://raw.github.com/less/less.js/v2.7.1/dist/less.min.js"> Get Less.js</a>
-						e inclua no <strong>'head'</strong> da sua página:</p>
-						<img src="img/LessInstall2.jpg">	
-					</section>
-				</section>
-				<section>
-					<section>
-						<h2> Variáveis </h2>
-						<p>Variáveis são bem vindas em qualquer lugar, e não poderiam faltar no CSS, quantas vezes já precisamos usar a mesma cor em diversos pontos diferentes?</p>
-						<script src="https://gist.github.com/gmouraws/8d8c3cacf8d1ed44982dd6b4ab3f4818.js"></script>						
-						<p><small><strong>Obs:</strong> Semelhante ao PHP, o LESS permite criar variáveis com strings como valor.</small></p>
-					</section>
-					<section>
-						<h2> Aninhamento </h2>
-						<p>Aninhamento(Nesting) é o que nos permite escrever o código praticamente sem repetições de seletores, o que facilita muito no desenvolvimento, pois no CSS não é possível organizar de forma hierárquica (um dentro do outro).</p>												
-						<script src="https://gist.github.com/gmouraws/37c4c170947352f0cf77d0b1684e8d0b.js"></script>
-					</section>
-					<section>
-						<h2> Pseudo-classes </h2>
-						<p> No LESS, é disponibilizado o símbolo "&" para herança de atributos e pseudo-classes/pseudo-elementos.</p>												
-						<script src="https://gist.github.com/gmouraws/be22fd40898925e47f1cedaafb8c1240.js"></script>
-					</section>					
-				</section>
-				<section>
-					<section>
-						<h2> Mixins </h2>
-						<p>São parecidos com funções, porém são usados para grupos reutilizáveis, permitem que você incorpore todas as propriedades de uma classe para outra, são como variavéis, mas para classes inteiras.</p>												
-						<script src="https://gist.github.com/gmouraws/ef1a87d8872f0e3f20079cc56b15a498.js"></script>
-					</section>
-					<section>
-						<h2> Mixins parametrizados </h2>
-						<p>O que significa que podem ter argumentos para aumentar sua utilidade.</p>												
-						<script src="https://gist.github.com/gmouraws/306432a982f36e718dbd98644f923869.js"></script>
-						<p>Podem também ter um valor padrão parametrizado.</p>
-						<script src="https://gist.github.com/gmouraws/f6ea654f380ea1a759c026d4b5023f82.js"></script>
-					</section>
-				</section>	
-				<section>
-					<section>
-						<h2> Operações </h2>
-						<p>Operações como adição, subtração, divisão e multiplicação de cores e valores das propriedades, podem ser usadas para criar diversas relações entre elas. </p>												
-						<script src="https://gist.github.com/gmouraws/57c5d7f2c56d4027b255f91d727cc7bc.js"></script>
-					</section>
-					<section>
-						<h2> Funções </h2>
-						<p>Existem diversas funções prontas no LESS, funções de texto, matemáticas, imagens, listas, tipos e cores.</p>												
-						<script src="https://gist.github.com/gmouraws/fa15411f8ef0ffff0c3d019338a3b986.js"></script>						
-						<p>Outras funções: <a href="http://lesscss.org/functions/#functions-overview">functions-overview - lesscss.org</a></p>
-					</section>
-					<section>
-						<h2> Palhetas de cores automáticas </h2>
-						<p>Imagine que no site (este é o site), tenha uma cor base principal e algumas cores secundárias combinando(default), 
-						ao invéz de ficar "catando" cores na tabela hexadecimal ou onde quer que seja, no LESS podemos usar funções para gerar estas cores: </p>												
-						<script src="https://gist.github.com/gmouraws/1bd65c5d007703225581af83fbbf6087.js"></script>
-						<p>No caso atual, vamos gerar cores 20% mais lights e 10% mais saturadas.</p>										
-					</section>
-				</section>		
-				<section>
-					<section>
-						<h2> Importações </h2>
-						<p>A ordem das importações no LESS, não é significativa, ele sempre encontrará os arquivos, desde que tenha a extensão <strong>.less</strong>, diferentemente do CSS padrão. </p>												
-						<p>São usadas para separar e organizar arquivos de temas ou até mesmo de variáveis, não acumulando centenas de códigos em um mesmo arquivo.</p>						
-						<script src="https://gist.github.com/gmouraws/4f068deedb6e7dcf0bb54f47a631fe80.js"></script>
-					</section>							
-				</section>	
-				<section>
-					<h2>Exemplos</h2>
-					<section>																	
-						<script src="https://gist.github.com/gmouraws/500fdc8d7c3745ad68002aeb081ee4e5.js" ></script>
-					</section>	
-					<section>						
-						<script src="https://gist.github.com/gmouraws/e06cb79556767b0477573a510d6bcec9.js"></script>
-					</section>	
-					<section>						
-						<script src="https://gist.github.com/gmouraws/84e73a4751c05522a8a292c0afe30357.js"></script>
-					</section>
-					<section>						
-						<script src="https://gist.github.com/gmouraws/cbd376214cc890aaf1f93d7e523f615f.js"></script>
-					</section>
-					<section> 
-						<p><img src="img/SelecionarEmpresaDirf.jpg"></p>						
-					</section>
-					<section> 
-						<p><img src="img/ExemploDirfAplub.jpg"></p>										
-					</section>
-					<section> 
-						<p><img src="img/ExemploDirfEcoAplub.jpg"></p>
-					</section>
-				</section>	
-				<section>
-					<section>
-							<h2>Conclusão</h2>
-							<p>O LESS oferece diversos recursos facilitadores, tanto para criação, quanto para a manutenção de CSS, sendo assim recomendado para sistemas novos e legados.</p>					    
-							<p>O uso de pré-processadores está sendo uma realidade no mercado, logo, deve ser encontrado em diversos portais, podendo também ser requisito em oportunidades de emprego.</p>
-					</section>
-				</section>	
-				<section>
+				
+					
+				<!--<section>
 					<section>
 							<h3>
 							  Perguntas?
@@ -181,7 +122,7 @@ p
 							</p>
 					    
 					</section>
-				</section>	
+				</section>	-->
 			</div>			
 		</div>
 
